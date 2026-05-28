@@ -1,0 +1,224 @@
+from datetime import datetime
+from typing import Any, Dict, List, Optional
+
+from pydantic import BaseModel, Field  # type: ignore[import]
+
+from app.models.types import MongoModel, PyObjectId
+
+GENDERS = ['male', 'female', 'other']
+ALERT_SEVERITIES = ['info', 'warning', 'critical']
+RISK_LEVELS = ['low', 'medium', 'high']
+REPORT_TYPES = ['health_summary', 'risk_review', 'care_plan']
+
+
+class TimestampedModel(MongoModel):
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+    updated_at: Optional[datetime] = Field(default=None)
+
+
+class OnboardingData(BaseModel):
+    """
+    Schema for initial user onboarding. 
+    Captures primary health indicators and lifestyle metadata.
+    """
+    age: Optional[int] = Field(default=None, ge=0, le=120)
+    gender: Optional[str] = Field(default=None, min_length=1)
+    weight_kg: Optional[float] = Field(default=None, ge=0, le=500)
+    height_cm: Optional[float] = Field(default=None, ge=0, le=300)
+    conditions: Optional[List[str]] = Field(default_factory=list)
+    lifestyle: Optional[str] = Field(default=None)
+    goals: Optional[List[str]] = Field(default_factory=list)
+    blood_group: Optional[str] = Field(default=None)
+
+
+class UserBase(MongoModel):
+    name: str = Field(..., min_length=1)
+    email: str = Field(..., min_length=5)
+    meta: Optional[Dict[str, Any]] = Field(default_factory=dict)
+
+
+class UserCreate(UserBase):
+    password: str = Field(..., min_length=6)
+    age: Optional[int] = Field(default=None, gt=0)
+    gender: Optional[str] = Field(default=None, min_length=1)
+    lifestyle: Optional[str] = Field(default=None, min_length=1)
+
+
+class UserUpdate(BaseModel):
+    name: Optional[str] = Field(default=None, min_length=1)
+    age: Optional[int] = Field(default=None, gt=0)
+    gender: Optional[str] = Field(default=None, min_length=1)
+    lifestyle: Optional[str] = Field(default=None, min_length=1)
+    meta: Optional[Dict[str, Any]] = None
+    height_cm: Optional[float] = Field(default=None, gt=0)
+    weight_kg: Optional[float] = Field(default=None, gt=0)
+    blood_group: Optional[str] = Field(default=None, min_length=1)
+    health_goal: Optional[str] = Field(default=None)
+
+
+class UserInDB(UserBase, TimestampedModel):
+    id: Optional[PyObjectId] = Field(alias='_id')
+    hashed_password: str
+
+
+class SymptomBase(MongoModel):
+    user_id: Optional[PyObjectId] = None
+    symptom: str = Field(..., min_length=1)
+    duration: int = Field(..., ge=0)
+    severity: int = Field(..., ge=1, le=10)
+    timestamp: datetime
+    notes: Optional[str] = Field(default=None, max_length=1000)
+    context: Optional[Dict[str, Any]] = Field(default_factory=dict)
+
+
+class SymptomCreate(SymptomBase):
+    pass
+
+
+class SymptomInDB(SymptomBase, TimestampedModel):
+    id: Optional[PyObjectId] = Field(alias='_id')
+
+
+class AnalysisBase(MongoModel):
+    user_id: Optional[PyObjectId] = None
+    risk_level: Optional[str] = None
+    reason: Optional[str] = None
+    summary: Optional[str] = None
+    metrics: Optional[Dict[str, Any]] = Field(default_factory=dict)
+    model_version: Optional[str] = None
+
+
+class AnalysisCreate(AnalysisBase):
+    pass
+
+
+class AnalysisInDB(AnalysisBase, TimestampedModel):
+    id: Optional[PyObjectId] = Field(alias='_id')
+
+
+class AlertBase(MongoModel):
+    user_id: Optional[PyObjectId] = None
+    message: str = Field(..., min_length=1)
+    severity: str = Field(..., min_length=1)
+    is_read: bool = False
+    category: Optional[str] = None
+    source: Optional[str] = None
+
+
+class AlertCreate(AlertBase):
+    pass
+
+
+class AlertInDB(AlertBase, TimestampedModel):
+    id: Optional[PyObjectId] = Field(alias='_id')
+
+
+class ReportBase(MongoModel):
+    user_id: Optional[PyObjectId] = None
+    summary: str = Field(..., min_length=1)
+    report_type: str = Field(..., min_length=1)
+    metrics: Optional[Dict[str, Any]] = Field(default_factory=dict)
+    generated_at: datetime = Field(default_factory=datetime.utcnow)
+
+
+class ReportCreate(ReportBase):
+    pass
+
+
+class ReportInDB(ReportBase, TimestampedModel):
+    id: Optional[PyObjectId] = Field(alias='_id')
+
+
+class MedicalHistoryUpsert(BaseModel):
+    conditions: Optional[list[str]] = Field(default=None)
+    medications: Optional[list[str]] = Field(default=None)
+    allergies:   Optional[list[str]] = Field(default=None)
+    surgeries:   Optional[list[str]] = Field(default=None)
+
+
+class FamilyHistoryEntry(BaseModel):
+    condition_name: str = Field(..., min_length=1)
+    relation: Optional[str] = Field(default=None)
+
+
+class FamilyHistoryBatch(BaseModel):
+    entries: list[FamilyHistoryEntry] = Field(default_factory=list)
+
+
+class LifestyleDataUpsert(BaseModel):
+    sleep_hours:         Optional[float] = Field(default=None, ge=0, le=24)
+    sleep_quality:       Optional[str]   = Field(default=None)
+    diet_type:           Optional[str]   = Field(default=None)
+    exercise_frequency:  Optional[str]   = Field(default=None)
+    water_intake_liters: Optional[float] = Field(default=None, ge=0)
+    smoking:             Optional[bool]  = Field(default=None)
+    alcohol:             Optional[bool]  = Field(default=None)
+    stress_level:        Optional[int]   = Field(default=None, ge=1, le=10)
+
+
+class HealthMetricsCreate(BaseModel):
+    systolic_bp:       Optional[int]   = Field(default=None, ge=50,  le=300)
+    diastolic_bp:      Optional[int]   = Field(default=None, ge=30,  le=200)
+    blood_sugar_mg_dl: Optional[float] = Field(default=None, ge=0)
+    heart_rate_bpm:    Optional[int]   = Field(default=None, ge=20,  le=300)
+    oxygen_saturation: Optional[int]   = Field(default=None, ge=50,  le=100)
+
+
+class MedicalReportResponse(BaseModel):
+    id: str
+    user_id: str
+    file_name: str
+    gridfs_file_id: str
+    file_type: str
+    uploaded_at: datetime
+
+
+class ReferenceRange(BaseModel):
+    min: Optional[float] = None
+    max: Optional[float] = None
+
+
+class LabResultCreate(BaseModel):
+    test_name: str = Field(..., min_length=1)
+    value: float
+    unit: Optional[str] = None
+    reference_range: Optional[ReferenceRange] = None
+    recorded_at: Optional[datetime] = None
+
+
+class LabResultInDB(MongoModel):
+    id: Optional[PyObjectId] = Field(alias='_id')
+    user_id: Optional[PyObjectId] = None
+    test_name: str
+    value: float
+    unit: Optional[str] = None
+    reference_range: Optional[Dict[str, float]] = None
+    status: Optional[str] = None
+    recorded_at: datetime
+    created_at: datetime
+
+
+class MedicationCreate(BaseModel):
+    medication_name: str = Field(..., min_length=1)
+    dosage: Optional[str] = None
+    frequency: Optional[str] = None
+    start_date: Optional[datetime] = None
+    end_date: Optional[datetime] = None
+    adherence_rate: Optional[float] = Field(default=None, ge=0, le=1)
+    side_effects: Optional[list[str]] = None
+    effectiveness_rating: Optional[int] = Field(default=None, ge=1, le=5)
+
+
+class MedicationInDB(MongoModel):
+    id: Optional[PyObjectId] = Field(alias='_id')
+    user_id: Optional[PyObjectId] = None
+    medication_name: str
+    dosage: Optional[str] = None
+    frequency: Optional[str] = None
+    start_date: Optional[datetime] = None
+    end_date: Optional[datetime] = None
+    adherence_rate: Optional[float] = None
+    side_effects: Optional[list[str]] = None
+    effectiveness_rating: Optional[int] = None
+    created_at: datetime
+    updated_at: datetime

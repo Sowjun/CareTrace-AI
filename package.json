@@ -1,0 +1,28 @@
+{
+  "name": "care-trace-ai-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CareTrace AI - Health Monitoring Platform",
+  "scripts": {
+    "setup": "npm install && npm run setup:backend && npm run setup:frontend",
+    "setup:frontend": "cd frontend && npm install",
+    "setup:backend": "python3 -m venv .venv && cd backend && ../.venv/bin/pip install -r requirements.txt",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && ../.venv/bin/python -m uvicorn app.main:app --reload --port 8001",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && ../.venv/bin/python -m pytest tests/ -v",
+    "test:frontend": "cd frontend && npm test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@tanstack/react-query": "^5.100.5",
+    "react-hook-form": "^7.74.0",
+    "recharts": "^3.8.1",
+    "zod": "^4.3.6"
+  }
+}

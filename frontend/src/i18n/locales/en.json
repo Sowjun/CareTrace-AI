@@ -1,0 +1,730 @@
+{
+  "app": {
+    "tagline": "Clear insights for your daily health."
+  },
+  "charts": {
+    "y_severity": "Severity (1–10)",
+    "x_time": "Date",
+    "x_symptom": "Symptom",
+    "y_count": "Times logged",
+    "caption_trend": "Higher numbers mean stronger symptoms. Use this to track your recovery.",
+    "caption_bars": "How often you've logged each symptom."
+  },
+  "navbar": {
+    "dashboard": "Dashboard",
+    "symptoms": "Symptoms",
+    "timeline": "Timeline",
+    "history": "Your history",
+    "analysis": "Your analysis",
+    "alerts": "Alerts",
+    "reports": "Your reports",
+    "recommendations": "Next steps",
+    "settings": "Settings",
+    "logout": "Sign out",
+    "search": "Search your data",
+    "active_session": "Active session",
+    "overview": "Overview",
+    "health_tracking": "Health tracking",
+    "health_intelligence": "Your insights",
+    "intelligence": "Your insights",
+    "account": "Your account",
+    "language": "Language",
+    "log_symptoms": "Log how you feel",
+    "search_placeholder": "Search your data",
+    "search_anything": "Search your data",
+    "notifications": "Notifications",
+    "notifications_new": "new",
+    "notifications_empty": "You're all caught up.",
+    "open_menu": "Open menu",
+    "health_profile": "Health Profile"
+  },
+  "dashboard": {
+    "tagline": "Understand your health over time.",
+    "greeting": {
+      "morning": "Good morning",
+      "afternoon": "Good afternoon",
+      "evening": "Good evening"
+    },
+    "greeting_default": "Good to see you",
+    "welcome": "Good to see you, {{name}}.",
+    "hello": "Hi, {{name}}.",
+    "welcome_default": "Good to see you.",
+    "loading": "Loading your health data...",
+    "tracked_count": "{{count}} logs",
+    "today": "Today",
+    "quick_actions": "Quick actions",
+    "log_symptom": "Log how you feel",
+    "run_analysis": "Run analysis",
+    "view_timeline": "View timeline",
+    "testimonials_btn": "Testimonials",
+    "alert_title": "Needs attention",
+    "alert_body": "Some symptoms may need attention. Consider speaking with a doctor.",
+    "alert_view": "View details",
+    "reminder_title": "Daily check-in",
+    "reminder_body": "Take a moment to log how you're feeling today.",
+    "reminder_log": "Log now",
+    "reminder_dismiss": "Not right now",
+    "search": {
+      "title": "Search your data",
+      "results": "Results for \"{{query}}\"",
+      "clear": "Clear",
+      "no_matches": "No results found.",
+      "no_matches_sub": "Check your spelling or try another term."
+    },
+    "stats": {
+      "logged": "Total logs",
+      "avg_sev": "Average severity",
+      "longest": "Longest streak",
+      "alerts": "Active alerts",
+      "all_time": "All time",
+      "across_logs": "Across all logs",
+      "single_run": "Longest duration",
+      "needs_attention": "Needs attention",
+      "all_clear": "Looking good"
+    },
+    "risk": {
+      "title": "Your health summary",
+      "status": "Status",
+      "high": "Needs attention",
+      "medium": "Monitor closely",
+      "low": "Looking good",
+      "not_assessed": "Not enough data",
+      "no_analysis": "No analysis yet",
+      "no_analysis_sub": "Run an analysis to see your health summary.",
+      "view_report": "View report",
+      "action_pending": "Run an analysis to get your next steps.",
+      "last_updated": "Last updated"
+    },
+    "charts": {
+      "trend": "Trend",
+      "severity_timeline": "Severity over time",
+      "distribution": "Overview",
+      "symptom_frequency": "Most common symptoms",
+      "data_points": "{{count}} logs",
+      "view_timeline": "View your timeline →",
+      "view_report": "View your report →",
+      "no_data": "No data yet.",
+      "no_data_sub": "Log your first symptom to get started.",
+      "no_match": "No results found.",
+      "no_match_sub": "Try adjusting your search.",
+      "no_freq_match": "No results found.",
+      "no_freq_data": "No data yet.",
+      "no_insight_match": "No results found.",
+      "no_insight_sub": "Try adjusting your search.",
+      "trend_aria": "Symptom severity over time",
+      "distribution_aria": "Symptom frequency distribution",
+      "data_points_label": "entries"
+    },
+    "insights": {
+      "title": "Your insights",
+      "personalized_insights": "Your insights",
+      "generate_report": "View report",
+      "profile_title": "Based on your profile",
+      "profile_body": "Tracking daily helps us provide better support for a {{lifestyle}} lifestyle.",
+      "profile_empty": "Complete your profile to get more relevant insights.",
+      "pattern_title": "Your recent patterns",
+      "pattern_body": "You've logged {{count}} times with an average severity of {{avg}}/10. Run an analysis to learn more.",
+      "empty": "No insights yet",
+      "empty_sub": "Log symptoms and complete your profile to see insights"
+    },
+    "demo_meds": {
+      "label": "Demo",
+      "title": "Sample medications",
+      "sample_badge": "Sample Data"
+    },
+    "error": {
+      "title": "Dashboard Error",
+      "subtitle": "Your data is safe. Please reload.",
+      "stats": "Statistics unavailable"
+    },
+    "greeting_morning": "Good morning, {{name}}",
+    "greeting_afternoon": "Good afternoon, {{name}}",
+    "greeting_evening": "Good evening, {{name}}",
+    "streak": "{{count}}-day streak",
+    "symptoms_count": "{{count}} symptom",
+    "symptoms_count_plural": "{{count}} symptoms"
+  },
+  "testimonials": {
+    "title": "What Our Users Say",
+    "subtitle": "Real feedback from pilot users and testers",
+    "roles": {
+      "pilot": "Pilot User",
+      "caregiver": "Caregiver",
+      "tester": "Beta Tester",
+      "physician": "General Physician"
+    },
+    "items": {
+      "ravi": {
+        "name": "Ravi Kumar",
+        "text": "CareTrace AI reminders made my medication routine completely stress-free. I never miss a dose now.",
+        "highlight": "completely stress-free"
+      },
+      "anitha": {
+        "name": "Anitha Reddy",
+        "text": "Tracking my father's medicines is now simple. It reduced our anxiety significantly.",
+        "highlight": "reduced our anxiety"
+      },
+      "suresh": {
+        "name": "Suresh",
+        "text": "The interface is clean and intuitive. Very practical for daily healthcare management.",
+        "highlight": "clean and intuitive"
+      },
+      "priya": {
+        "name": "Dr. Priya Sharma",
+        "text": "Solutions like CareTrace AI can improve medication adherence and patient safety.",
+        "highlight": "medication adherence"
+      }
+    }
+  },
+  "symptoms": {
+    "title": "Log how you feel",
+    "subtitle": "Take a moment to record how you're feeling.",
+    "health_goal_title": "How can we help today?",
+    "health_goals": {
+      "symptom_check": "Log a symptom",
+      "chronic_management": "Manage a condition",
+      "preventive_care": "Check my wellness",
+      "general_consultation": "Prepare for a doctor visit"
+    },
+    "add_title": "Add symptom",
+    "voice_input": "Use your voice",
+    "listening": "Listening...",
+    "type_label": "What are you feeling?",
+    "type_placeholder": "Choose an option",
+    "duration_label": "Duration (days)",
+    "duration_placeholder": "e.g., 3",
+    "date_label": "When did this start?",
+    "severity_label": "Severity: {{score}} ({{label}})",
+    "severity_help": "1 is mild, 10 is severe",
+    "submit_btn": "Log now",
+    "step1_label": "Select Symptom",
+    "step2_label": "Intensity",
+    "step3_label": "Context (Optional)",
+    "notes_placeholder": "What else changed today?",
+    "logged_confirm": "Logged.",
+    "duplicate_title": "Already Logged",
+    "duplicate_body": "You already logged this symptom today. Would you like to add another entry?",
+    "duplicate_confirm": "Yes, log again",
+    "mild": "Mild",
+    "severe": "Severe",
+    "recorded_title": "Your history",
+    "logged_on": "Logged on {{date}}",
+    "duration_display": "Lasted {{count}} days",
+    "empty_state": "Log your first symptom to get started.",
+    "errors": {
+      "incomplete": "Please fill out all fields.",
+      "duration_min": "Duration needs to be at least 1 day.",
+      "failed": "Something went wrong. Please try again."
+    },
+    "notifications": {
+      "voice_active": "Listening...",
+      "voice_success": "Got it.",
+      "log_success": "Saved."
+    },
+    "options": {
+      "headache": "Headache",
+      "fever": "Fever",
+      "cough": "Cough",
+      "fatigue": "Fatigue",
+      "nausea": "Nausea",
+      "dizziness": "Dizziness",
+      "chest pain": "Chest pain",
+      "shortness of breath": "Shortness of breath"
+    }
+  },
+  "timeline": {
+    "title": "Your timeline",
+    "subtitle": "See how your health changes over time.",
+    "list_title": "Your history",
+    "multiple_entries": "Multiple logs",
+    "empty": {
+      "title": "No data yet.",
+      "body": "Log your first symptom to get started."
+    },
+    "trends": {
+      "increasing": "Needs attention",
+      "decreasing": "Improving",
+      "increasing_title": "Symptoms may need attention",
+      "decreasing_title": "Symptoms are improving"
+    },
+    "severity_weight": "Severity",
+    "days_tracking": "Tracking for {{count}} days",
+    "get_analysis": "Analyze patterns",
+    "show_more": "Show more",
+    "show_less": "Show less",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "this_week": "This Week",
+    "older": "Older",
+    "gap_days": "{{count}} day with no log",
+    "gap_days_plural": "{{count}} days with no log"
+  },
+  "history": {
+    "title": "Your history",
+    "subtitle": "Your complete health record.",
+    "table": {
+      "date": "Date",
+      "symptom": "Symptom",
+      "duration": "Duration",
+      "severity": "Severity"
+    },
+    "empty": {
+      "title": "No history yet.",
+      "body": "Log your first symptom to get started."
+    }
+  },
+  "analysis": {
+    "title": "Your analysis",
+    "subtitle": "Understand your health patterns.",
+    "loading": {
+      "title": "Analyzing your data...",
+      "body": "Looking for patterns in your history..."
+    },
+    "report": {
+      "compiled": "Your report is ready",
+      "generated": "Created: {{date}}",
+      "risk_delta": "Health summary",
+      "reasoning": "Key findings",
+      "context": "Additional context",
+      "persisted_msg": "Some symptoms have lasted longer than usual.",
+      "clustering_msg": "We noticed several symptoms logged closely together.",
+      "action_plan": "Next steps",
+      "view_alerts": "View details",
+      "view_full_report": "View report →"
+    },
+    "disclaimer": "This is for informational purposes only. Always consult a doctor for medical advice.",
+    "ready": {
+      "title": "Ready when you are",
+      "body": "Run an analysis to see your health patterns.",
+      "run_btn": "Run analysis"
+    },
+    "notifications": {
+      "generating": "Analyzing your data...",
+      "success": "Analysis complete.",
+      "error": "Something went wrong. Please try again."
+    },
+    "loading_steps": [
+      "Scanning symptom patterns...",
+      "Evaluating severity vectors...",
+      "Correlating health signals...",
+      "Computing risk probability...",
+      "Generating recommendations..."
+    ]
+  },
+  "alerts": {
+    "title": "Your alerts",
+    "subtitle": "Important updates about your health.",
+    "health_alert": "Needs attention",
+    "consult_reminder": "Consider speaking with a doctor.",
+    "empty": {
+      "title": "You're all caught up.",
+      "body": "No active alerts right now."
+    },
+    "footer_disclaimer": "This is not medical advice. Always speak with a doctor.",
+    "view_recommendations": "View next steps",
+    "mark_read": "Mark as read",
+    "mark_as_read": "Mark as read"
+  },
+  "reports": {
+    "title": "Your reports",
+    "subtitle": "Review and download your health records.",
+    "download_btn": "Download",
+    "compiling": "Preparing your file...",
+    "allowed_types_error": "Only PDF, JPG, and PNG files are allowed.",
+    "size_error": "File size must be under 10MB.",
+    "upload_success": "Medical report uploaded successfully.",
+    "upload_failed": "Failed to upload file.",
+    "delete_success": "Medical report deleted.",
+    "delete_failed": "Failed to delete report.",
+    "view": "View",
+    "upload": "Upload",
+    "uploading": "Uploading…",
+    "profile": {
+      "title": "Your profile",
+      "name": "Name",
+      "age": "Age",
+      "gender": "Gender",
+      "lifestyle": "Lifestyle"
+    },
+    "stats": {
+      "total_symptoms": "Total logs",
+      "avg_severity": "Average severity",
+      "longest_run": "Longest streak",
+      "days": "{{count}} day(s)"
+    },
+    "charts": {
+      "severity_trend": "Severity trend",
+      "latest_updates": "Latest updates",
+      "empty": "No data yet. Log your first symptom to get started."
+    },
+    "notifications": {
+      "booting": "Preparing your file...",
+      "success": "Your file is ready."
+    },
+    "disclaimer": "This is for informational purposes only. Always consult a doctor.",
+    "download": "Download",
+    "delete": "Delete",
+    "select_file": "Upload Report",
+    "empty": "No medical reports uploaded yet",
+    "upload_error": "Failed to upload file",
+    "delete_error": "Failed to delete report",
+    "error": {
+      "invalid_type": "Only PDF, JPG, and PNG files are allowed",
+      "too_large": "File size must be under 10 MB"
+    },
+    "delete_dialog": {
+      "title": "Delete Report",
+      "body": "Are you sure you want to delete",
+      "warning": "This cannot be undone."
+    }
+  },
+  "common": {
+    "disclaimer": "Disclaimer",
+    "disclaimer_label": "Disclaimer",
+    "save": "Save changes",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "retry": "Try again",
+    "close": "Close",
+    "language_choice": "Choose a language.",
+    "not_available": "N/A",
+    "pending": "Pending",
+    "gender": {
+      "male": "Male",
+      "female": "Female",
+      "other": "Other",
+      "placeholder": "Choose an option"
+    },
+    "lifestyle": {
+      "sedentary": "Sedentary (mostly sitting)",
+      "active": "Active (regular exercise)",
+      "smoker": "Smoker",
+      "placeholder": "Choose an option"
+    },
+    "severity": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High"
+    },
+    "next": "Next",
+    "skip": "Skip"
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Manage your account and preferences.",
+    "profile_section": "Your profile",
+    "full_name": "Full name",
+    "age": "Age",
+    "preferences_section": "Preferences",
+    "push_notifications": {
+      "title": "Push notifications",
+      "body": "Get important updates on your device."
+    },
+    "emails": {
+      "title": "Email updates",
+      "body": "Receive weekly summary emails."
+    },
+    "about_section": "About CareTrace",
+    "about_body": "CareTrace is a health platform that helps you track symptoms and understand your patterns over time.",
+    "notifications": {
+      "title": "Push Notifications",
+      "body": "Receive alerts on your device.",
+      "profile_success": "Saved.",
+      "profile_error": "Something went wrong. Please try again.",
+      "pref_updated": "Saved.",
+      "lang_applied": "Saved.",
+      "delete_success": "Account deleted successfully. Goodbye."
+    },
+    "preferences_section": "Preferences",
+    "theme_body": "Switch between light and dark modes.",
+    "danger_zone": "Dangerous Action Zone",
+    "delete_warning": "Deleting your account is permanent and cannot be undone. All your health data, symptoms, and medical reports will be permanently purged.",
+    "delete_account_btn": "Delete Account",
+    "confirm_delete_title": "Delete your account?",
+    "confirm_delete_body": "This action is irreversible. Please type \"DELETE\" below to proceed.",
+    "confirm_type_label": "Type DELETE to confirm",
+    "confirm_delete_btn": "Delete Permanently",
+    "delete_account": "Delete Account",
+    "delete_confirm_prompt": "Are you sure you want to delete your account?"
+  },
+  "recommendations": {
+    "title": "Next steps",
+    "subtitle": "Next steps based on your health patterns.",
+    "section_title": "Next steps",
+    "disclaimer": "This is not medical advice. Always consult a doctor for health concerns.",
+    "empty": {
+      "title": "No next steps yet.",
+      "body": "Log your first symptom to get started."
+    },
+    "risk_plans": {
+      "low": [
+        "Keep tracking your health.",
+        "Maintain a healthy lifestyle.",
+        "Stay hydrated and rest."
+      ],
+      "medium": [
+        "Consider speaking with a doctor.",
+        "Keep tracking your health.",
+        "Notice any changes."
+      ],
+      "high": [
+        "Consider speaking with a doctor.",
+        "Keep detailed records.",
+        "Rest and stay hydrated."
+      ],
+      "default": [
+        "Keep tracking your health.",
+        "Consult a doctor as needed."
+      ]
+    },
+    "personalized": {
+      "sedentary_exercise": "Based on your sedentary lifestyle and risk profile, consider incorporating 15 minutes of light walking daily to improve circulation.",
+      "age_screening": "Given your age group, we recommend scheduling an annual cardiovascular screening and bone density test.",
+      "chronic_specialist": "Your recent symptoms may be related to your chronic condition ({{condition}}). Consider consulting your specialist for a targeted review."
+    }
+  },
+  "demo": {
+    "banner": "You are using a demo account. Data is for demonstration only."
+  },
+  "landing": {
+    "hero_title": "Your health,",
+    "hero_title_highlight": "clearly understood.",
+    "hero_subtitle": "Understand your health over time.",
+    "cta_login": "Sign in",
+    "cta_signup": "Create account",
+    "cta_try_demo": "Try demo",
+    "hero_headline": "Understand your health.",
+    "feature_1_title": "Log in seconds",
+    "feature_1_body": "Built for daily use, not paperwork.",
+    "feature_2_title": "See your patterns",
+    "feature_2_body": "See how your health changes over time, rather than just today.",
+    "feature_3_title": "Share with your doctor",
+    "feature_3_body": "Export a clear timeline of your health for your next appointment.",
+    "footer_mission": "Health happens between appointments. CareTrace helps you track what matters.",
+    "mockup_profile": "Profile",
+    "mockup_name": "Sarah Jenkins",
+    "mockup_health_score": "Health score",
+    "mockup_pattern_detected": "Pattern detected",
+    "mockup_score": "Score",
+    "metric_resting_hr": "Resting HR",
+    "metric_bpm": "bpm",
+    "metric_sleep_recovery": "Sleep",
+    "metric_hrs": "hrs",
+    "feature_timeline_eyebrow": "Timeline",
+    "feature_analysis_eyebrow": "Analysis",
+    "feature_tracking_eyebrow": "Tracking",
+    "month_jan": "Jan",
+    "month_feb": "Feb",
+    "month_mar": "Mar",
+    "month_apr": "Apr",
+    "month_may": "May",
+    "month_jun": "Jun",
+    "features_title": "Why CareTrace?",
+    "feature_tracking": "Simple tracking",
+    "feature_tracking_desc": "Log symptoms easily with simple inputs and clear scoring.",
+    "feature_analysis": "Clear insights",
+    "feature_analysis_desc": "Identify patterns in your symptom history to better understand your health.",
+    "feature_timeline": "Visual timeline",
+    "feature_timeline_desc": "See your health patterns over time with clear, interactive charts.",
+    "feature_multilingual": "Multiple languages",
+    "feature_multilingual_desc": "Fully supported in English, Hindi, Telugu, Tamil, and Kannada.",
+    "trusted_by": "Trusted by patients and doctors",
+    "privacy_badge": "Secure · Encrypted · Private",
+    "hero_h1": "Stop guessing. Start tracking.",
+    "hero_copy": "Clear insights for your long-term health.",
+    "mini_card_1_title": "Log in seconds",
+    "mini_card_1_detail": "Built for daily use, not paperwork.",
+    "mini_card_2_title": "See your patterns",
+    "mini_card_2_detail": "See how your health changes over time, rather than just today.",
+    "mini_card_3_title": "Share with your doctor",
+    "mini_card_3_detail": "Export a clear timeline for your next appointment.",
+    "trust_continuity_eyebrow": "Continuity",
+    "trust_continuity_title": "Your living health record.",
+    "trust_continuity_detail": "Turn single updates into a clear history, making it easier to spot trends over time.",
+    "trust_signal_eyebrow": "Clarity",
+    "trust_signal_title": "Clear and focused.",
+    "trust_signal_detail": "A calm interface that highlights what matters, so you can focus on your health.",
+    "trust_privacy_eyebrow": "Privacy",
+    "trust_privacy_title": "Private by design.",
+    "trust_privacy_detail": "Your health data is sensitive. We use industry-standard encryption to keep it secure.",
+    "workflow_eyebrow": "How it works",
+    "workflow_title": "Capture the signal. Ignore the noise.",
+    "workflow_desc": "Designed to make tracking simple, so you can focus on understanding your health.",
+    "workflow_step1_title": "Log quickly",
+    "workflow_step1_desc": "Log symptoms and notes in seconds.",
+    "workflow_step2_title": "See the pattern",
+    "workflow_step2_desc": "Watch your daily check-ins turn into a clear timeline.",
+    "workflow_step3_title": "Take action",
+    "workflow_step3_desc": "Bring a detailed history to your next doctor's visit.",
+    "platform_eyebrow": "Platform",
+    "platform_desc": "A secure, simple platform built to give you control over your health data.",
+    "feature_timeline_card_title": "A clear view of your health.",
+    "feature_timeline_card_desc": "See your symptoms, reports, and insights in one continuous timeline.",
+    "feature_timeline_card_metric": "Clear history",
+    "feature_analysis_card_title": "Insights you can understand.",
+    "feature_analysis_card_desc": "Clear summaries and pattern detection, without the medical jargon.",
+    "feature_analysis_card_metric": "Actionable insights",
+    "feature_tracking_card_title": "Simple, accurate tracking.",
+    "feature_tracking_card_desc": "Easy-to-use inputs ensure your data is always accurate and useful.",
+    "feature_tracking_card_metric": "Accurate data",
+    "feature_access_eyebrow": "Access",
+    "feature_access_title": "Available in your language.",
+    "feature_access_desc": "Designed to be accessible, with full support for multiple languages.",
+    "feature_access_metric": "Five languages",
+    "security_eyebrow": "Security",
+    "security_title": "Your data stays private.",
+    "security_desc": "We use top-tier encryption and security practices to ensure your health information is safe.",
+    "security_cta_signup": "Create account",
+    "security_pillar1_title": "You are in control",
+    "security_pillar1_desc": "You decide who sees your health data and when to share it.",
+    "security_pillar2_title": "Secure infrastructure",
+    "security_pillar2_desc": "Built with industry-leading security to protect your information.",
+    "security_pillar3_title": "Clear reports",
+    "security_pillar3_desc": "Export your data into simple, secure reports for your doctor.",
+    "cta_heading": "Health happens between appointments.",
+    "cta_copy": "CareTrace helps you track what matters.",
+    "cta_demo_btn": "Explore interactive demo",
+    "footer_tagline": "Track your symptoms and take control of your health journey.",
+    "footer_product": "Product",
+    "footer_access": "Access",
+    "footer_features": "Features",
+    "footer_workflow": "How it works",
+    "footer_security": "Security",
+    "footer_create_account": "Create account",
+    "footer_sign_in": "Sign in",
+    "footer_about": "About CareTrace",
+    "footer_copyright": "All rights reserved.",
+    "footer_get_started": "Get started"
+  },
+  "onboarding": {
+    "title": "Let's set up your profile",
+    "subtitle": "This helps us personalize your health insights.",
+    "step_counter": "Step {{current}} of {{total}} · {{stepName}}",
+    "steps": {
+      "basic": "About you",
+      "medical": "Your health history",
+      "family": "Family health",
+      "lifestyle": "Daily habits",
+      "vitals": "Additional health data"
+    },
+    "actions": {
+      "next": "Next",
+      "saving": "Saving your data...",
+      "skip": "Skip (you can add this later)",
+      "add_condition": "Add another condition",
+      "remove": "Remove"
+    },
+    "basic": {
+      "age": "Age",
+      "age_placeholder": "e.g. 28",
+      "gender": "Gender",
+      "gender_select": "Choose an option",
+      "height": "Height (cm)",
+      "height_placeholder": "e.g. 170",
+      "weight": "Weight (kg)",
+      "weight_placeholder": "e.g. 65",
+      "bmi_label": "Estimated BMI:",
+      "blood_group": "Blood group",
+      "blood_group_select": "Choose an option",
+      "lifestyle": "Current lifestyle",
+      "lifestyle_select": "Choose an option",
+      "lifestyle_active": "Active",
+      "lifestyle_sedentary": "Sedentary",
+      "lifestyle_smoker": "Smoker"
+    },
+    "medical": {
+      "hint": "You can add multiple using commas.",
+      "conditions": "Existing conditions",
+      "conditions_placeholder": "e.g. Asthma, Hypertension",
+      "medications": "Current medications",
+      "medications_placeholder": "e.g. Aspirin",
+      "allergies": "Allergies",
+      "allergies_placeholder": "e.g. Peanuts, Penicillin",
+      "surgeries": "Past surgeries",
+      "surgeries_placeholder": "e.g. Appendectomy"
+    },
+    "family": {
+      "hint": "Add conditions that run in your family (optional).",
+      "condition": "Condition",
+      "condition_select": "Choose an option",
+      "relation": "Relation",
+      "relation_select": "Optional"
+    },
+    "lifestyle": {
+      "sleep": "Sleep duration (hours per night)",
+      "sleep_placeholder": "e.g. 7",
+      "sleep_quality": "Sleep quality",
+      "quality_select": "Choose an option",
+      "quality_good": "Good",
+      "quality_average": "Average",
+      "quality_poor": "Poor",
+      "diet": "Diet type",
+      "diet_select": "Choose an option",
+      "diet_veg": "Vegetarian",
+      "diet_nonveg": "Non-vegetarian",
+      "diet_mixed": "Mixed",
+      "exercise": "Exercise frequency",
+      "ex_select": "Choose an option",
+      "ex_none": "None",
+      "ex_weekly": "A few times a week",
+      "ex_regular": "Daily or almost daily",
+      "water": "Water intake (liters per day)",
+      "water_placeholder": "e.g. 2.5",
+      "stress": "Stress level",
+      "stress_low": "Low",
+      "stress_high": "High",
+      "smoking": "Smoking",
+      "alcohol": "Alcohol"
+    }
+  },
+  "auth": {
+    "login_title": "Welcome back",
+    "login_subtitle": "Sign in to your account.",
+    "signup_title": "Create your account",
+    "signup_subtitle": "Create an account to get started.",
+    "email": "Email address",
+    "password": "Password",
+    "full_name": "Full name",
+    "age": "Age",
+    "gender": "Gender",
+    "lifestyle": "Lifestyle",
+    "login_btn": "Sign in",
+    "signup_btn": "Create account",
+    "already_mapped": "Already have an account?",
+    "login_natively": "Sign in",
+    "no_account": "Don't have an account?",
+    "create_profile": "Create account",
+    "demo_title": "Guided tour",
+    "demo_subtitle": "Explore the dashboard using sample data.",
+    "fill_demo": "Use demo account",
+    "constructing": "Signing in...",
+    "try_demo_title": "Explore CareTrace",
+    "try_demo_subtitle": "Take a look around the dashboard using sample data.",
+    "try_demo_btn": "Explore interactive demo",
+    "demo_failed": "Something went wrong. Please check your connection and try again.",
+    "signup_success": "Your account is ready.",
+    "errors": {
+      "password_short": "Your password must be at least 6 characters.",
+      "age_invalid": "Please enter a valid age.",
+      "failed": "We couldn’t sign you in. Please check your details and try again.",
+      "email_registered": "An account with this email already exists. Try signing in instead."
+    },
+    "show_password": "Show password",
+    "hide_password": "Hide password",
+    "stay_signed_in": "Stay signed in"
+  },
+  "health_metrics": {
+    "title": "Health Metrics (Vitals)",
+    "add_entry": "Add Entry",
+    "not_provided": "Not provided",
+    "form_subtitle": "Enter your current vital signs",
+    "error_empty": "Please enter at least one metric value",
+    "success": "Vitals recorded",
+    "error_save": "Failed to save vitals",
+    "systolic_bp": "Systolic BP (mmHg)",
+    "diastolic_bp": "Diastolic BP (mmHg)",
+    "blood_sugar": "Blood Sugar (mg/dL)",
+    "heart_rate": "Heart Rate (bpm)",
+    "oxygen_saturation": "Oxygen Saturation (%)"
+  }
+}

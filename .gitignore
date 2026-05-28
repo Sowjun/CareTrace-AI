@@ -1,0 +1,49 @@
+# ─── Frontend ─────────────────────────────────────────────────────────────────
+node_modules/
+dist/
+dist-ssr/
+*.local
+.vite.env
+
+# ─── Backend ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.hypothesis/
+coverage.xml
+*.log
+htmlcov/
+
+# ─── Environment ──────────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ─── IDE ──────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ─── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+
+# ─── Security ─────────────────────────────────────────────────────────────────
+*.pem
+*.key
+*.cert
+secrets/
+credentials/
+*.db
